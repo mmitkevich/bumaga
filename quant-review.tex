@@ -1,20 +1,54 @@
-\documentclass[]{article}
+\documentclass[a4paper,11pt]{article}
+ 
+\usepackage{times}
+\usepackage{natbib}
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage{todo}
 
-%opening
-\title{financial articles review}
-\author{Mikhail Mitkevich}
+\DeclareMathSizes{10}{18}{12}{8}   % For size 10 text
+\DeclareMathSizes{11}{19}{13}{9}   % For size 11 text
+\DeclareMathSizes{12}{20}{14}{10}  % For size 12 text
 
 \begin{document}
+\title{My Quant Review}
+\author{Mikhail Mitkevich}
+\date{2015-3-15}
+
 
 \maketitle
 
 \begin{abstract}
-keywords: Principal Components Analysis, Hidden Markov Networks, Artificial Neural Networks, Bayessian Networks
+keywords: PCA, Markov, ANN, Bayess, Elliott Waves
 \end{abstract}
 
-\section{Classification}
+\section{Introduction}
+\begin{tabular}{|c|c|c|}
+\hline a & b & c \\ 
+\hline a1 & b1 &  c1\\ 
+\hline 
+\end{tabular} 
+
+\section{PCA}
+
+Since \cite{avellaneda2010statistical} using Principal Components Analysis (PCA) to build statistical arbitrage  strategies is quite common \Todo{cites}.
+Usually these strategy exploits mean reversion of stock prices to some statistical "equilibrium point", which is determined using PCA.
+
+However, \cite{infantino2010} report that PCA model could behave poor when market switches to new "regime", implying quite different equilibrium state. 
+Panic selloff period during financial crisis is example of such regimes. 
+\cite{infantino2010} used volatility of PCA vectors as metric to identify these regime switches.
+When identified, they used opposite strategy \todo{trading away from PCA}.
+After such modification their reported sharp-ratio looked quite good \Todo{sharpe numbers}.
 
 
-$a_1 = \int_0^20\frac{f(x)}{20}dx$
 
+
+\section{Conclusion}
+
+\section{Future Work}
+
+\todos
+
+\bibliographystyle{te}
+\bibliography{research}
 \end{document}
